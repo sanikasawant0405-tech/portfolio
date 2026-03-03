@@ -47,18 +47,30 @@ function Profile() {
           {typedText}
         </motion.p>
 
-        {/* Resume Button Added Here */}
-        <motion.a
-          href="/SanikaSawantJavaDeveloper.pdf"
-          download
-          className="resume-btn"
+        {/* Resume Buttons */}
+        <motion.div
+          className="resume-buttons"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          whileHover={{ scale: 1.08 }}
         >
-          📄 Download Resume
-        </motion.a>
+          <a
+            href="/SanikaSawantJavaDeveloper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="view-btn"
+          >
+            👀 View Resume
+          </a>
+
+          <a
+            href="/SanikaSawantJavaDeveloper.pdf"
+            download
+            className="download-btn"
+          >
+            📄 Download Resume
+          </a>
+        </motion.div>
 
       </div>
     </motion.div>

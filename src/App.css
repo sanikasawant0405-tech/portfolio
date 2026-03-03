@@ -223,19 +223,44 @@ a {
   }
 }
 
-.resume-btn {
-  display: inline-block;
+.resume-buttons {
   margin-top: 20px;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: 0.3s ease;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.resume-btn:hover {
+.view-btn,
+.download-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* View Button */
+.view-btn {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.view-btn:hover {
+  background: #38bdf8;
+  color: white;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+/* Download Button */
+.download-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
 }
