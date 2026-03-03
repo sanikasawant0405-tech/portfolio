@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaUser, FaBullseye, FaGraduationCap, FaLaptopCode, FaAward, FaDocker, FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Profile() {
   const [typedText, setTypedText] = useState("");
@@ -30,12 +29,37 @@ function Profile() {
           className="profile-img"
           whileHover={{ scale: 1.05, boxShadow: "0 0 25px #38bdf8, 0 0 50px #0ea5e9" }}
         />
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Sanika Sawant
         </motion.h1>
-        <motion.p className="typing" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+
+        <motion.p
+          className="typing"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
           {typedText}
         </motion.p>
+
+        {/* Resume Button Added Here */}
+        <motion.a
+          href="/SanikaSawantJavaDeveloper.pdf"
+          download
+          className="resume-btn"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          whileHover={{ scale: 1.08 }}
+        >
+          📄 Download Resume
+        </motion.a>
+
       </div>
     </motion.div>
   );
